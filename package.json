@@ -1,0 +1,15 @@
+{
+  "name": "mtg_bot",
+  "version": "1.0.0",
+  "description": "mtg card fetcher bot for slack",
+  "main": "index.js",
+  "scripts": {
+    "test": "tt"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@slack/client": "^3.8.1",
+    "mtgsdk": "^0.1.1"
+  }
+}
