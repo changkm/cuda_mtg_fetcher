@@ -23,6 +23,23 @@ fs.readFile('../token', 'utf8', function (err,bot_token) {
 
 			res = res.replace("’", "%27");
 
+			if(res == "Slambo" || res == "slambo")
+			{
+				var t = Date.now();
+				console.log(t);
+
+				if(t % 2 == 0)
+				{
+					url = "http://i.imgur.com/4vFIe9d.jpg";
+				}
+				else
+				{
+					url = "http://i.imgur.com/kZyW3EP.png";
+				}
+
+				rtm.sendMessage(url, message.channel);
+			}
+
 			mtg.card.where({name: res}).then(
 				function(cards)
 				{
