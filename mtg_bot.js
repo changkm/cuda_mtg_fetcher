@@ -1,7 +1,7 @@
 var RtmClient = require('@slack/client').RtmClient;
 var RTM_EVENTS = require('@slack/client').RTM_EVENTS;
 var fs = require('fs');
-fs.readFile('../token', 'utf8', function (err,bot_token) {
+fs.readFile(process.argv[2], 'utf8', function (err,bot_token) {
 	if (err) {
 		return console.log(err);
 	}
