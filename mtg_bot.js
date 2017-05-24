@@ -10,6 +10,9 @@ fs.readFile(process.argv[2], 'utf8', function (err,bot_token) {
 	var rtm = new RtmClient(bot_token.trim());
 
 	rtm.on(RTM_EVENTS.MESSAGE, function handleRtmMessage(message) {
+		if (message.type == 'message' && message.hasOwnProperty('user') && message.user == 'bmagee'){
+			rtm.sendMessage("Fuck you, Ben");
+		}
 		if(message.type == 'message' && message.hasOwnProperty('text') && message.text.indexOf("[[") != -1 && message.text.indexOf("]]") != -1)
 		{
 			var left = message.text.search("\\[\\[") + 2;
